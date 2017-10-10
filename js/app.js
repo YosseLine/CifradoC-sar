@@ -1,21 +1,14 @@
-function cipher(sentence, newSentence){
-    sentence = prompt("Ingrese frase");
-    
-    for(var i=0; i<sentence.length; i++){
-     var convertToASCII = sentence.charCodeAt(i);
-      newSentence = ((convertToASCII - 65 + 33) % 26 + 65);
-      if(sentence === sentence.toUpperCase ){
-        return newSentence;
-      }
-      else if(sentence === " " || sentence === sentence.length){
-        alert("ERROR");
-      }
-      
-    }
-    return newSentence;
+var sentence = prompt("Ingrese frase");
+var ascii = 0;
+
+function cipher (sentence, newSentence){
+  for(var i=0; i<sentence.length; i++){
+    ascii = ((sentence.charCodeAt(i) -65 + 33) % 26 + 65);
+   if(asci >=65 && assci <= 90 || ascii >=97 && asci <=122){
+    newSentence = String.fromCharCode(ascii);
+   } 
   }
-  
-  
-  function descipher (sentence, newSentence){
-    
-  }
+  return newSentence;
+}
+
+cipher(sentence,newSentence);
